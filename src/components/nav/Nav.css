@@ -1,0 +1,45 @@
+nav {
+    position: fixed;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: max-content;
+    display: flex;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.7rem 1.7rem;
+    border-radius: 3rem;
+
+    ul {
+        display: flex;
+        gap: 1.5rem;
+        li {
+            a {
+                color: var(--color-light);
+                display: flex;
+                font-size: 1.4rem;
+                background: transparent;
+                padding: 0.8rem;
+                border-radius: 50%;
+            }
+
+            a:hover {
+                color: var(--color-white);
+                background: var(--color-primary);
+            }
+
+            a.active {
+                color: var(--color-white);
+                background: var(--color-primary);
+            }
+        }
+    }
+}
+@media screen and (max-width: 450px) {
+    nav {
+        ul {
+            gap: 0.4rem;
+        }
+    }
+}
